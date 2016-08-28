@@ -1,0 +1,36 @@
+scss_files: "./source/stylesheets/**"
+exclude:
+  - "./source/stylesheets/vendor/**"
+  - "./build/**"
+  - "./public/**"
+  - "./vendor/**"
+
+linters:
+  BorderZero:
+    severity: error
+  ColorKeyword:
+    severity: error
+  DuplicateProperty:
+    severity: error
+  EmptyLineBetweenBlocks:
+    enabled: false
+  EmptyRule:
+    severity: error
+  Indentation:
+    severity: error
+  ImportantRule:
+    severity: error
+  MergeableSelector:
+    severity: error
+  PropertySortOrder:
+    enabled: false
+  SingleLinePerProperty:
+    allow_single_line_rule_sets: false
+  StringQuotes:
+    style: double_quotes
+  TrailingSemicolon:
+    severity: error
+  UrlFormat:
+    enabled: false
+  QualifyingElement:
+    severity: error
