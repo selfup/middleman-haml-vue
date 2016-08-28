@@ -9,11 +9,12 @@
     %h1 
       HAML and:
     #app
-      %h2 {{ message }}
-      .comments
-        .comment{ "v-for" => 'comment in comments'}
-          %h4{ v: { 'on:click' => 'logIndex($index)' } }
-            {{ comment }}
+      .cloak(v-cloak)
+        %h2 {{ message }}
+        .comments
+          .comment{ "v-for" => 'comment in comments'}
+            %h4{ v: { 'on:click' => 'logIndex($index)' } }
+              {{ comment }}
 
 %script(src="/javascripts/vendor/vue.min.js")
 %script(src="/javascripts/application.js")
