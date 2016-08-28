@@ -20,7 +20,6 @@ activate :autoprefixer do |config|
 end
 
 configure :development do
-  activate :asset_hash
   es6_transcompile
   activate :livereload
 end
@@ -36,7 +35,6 @@ configure :build do
 
   es6_transcompile
 
-  activate :asset_hash
   activate :minify_css
   activate :minify_javascript
   activate :minify_html

@@ -2,17 +2,16 @@
 %html
   %head
     %title HAML Vue
-    %style(type="text/css")
-      :css
-        [v-cloak] { display: none; }
-  %body(v-cloak)
-    %h1
-      HAML and:
-    #app
-      %h2 {{ message }}
-      .comments
-        .comment{ "v-for" => 'comment in comments'}
-          %h4{ v: { 'on:click' => 'logIndex($index)' } }
-            {{ comment }}
+    %link(rel="stylesheet" type="text/css" href="stylesheets/application.css")
+  %body
+    %div(v-cloak v-cloak--hidden)
+      %h1
+        HAML and:
+      #app
+        %h2 {{ message }}
+        .comments
+          .comment{ "v-for" => 'comment in comments'}
+            %h4{ v: { 'on:click' => 'logIndex($index)' } }
+              {{ comment }}
 
     %script(src="javascripts/application.js")
