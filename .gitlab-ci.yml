@@ -1,11 +1,34 @@
+image: "ruby:2.1"
+
+before_script:
+  - ruby -v
+  - which ruby
+  - gem install bundler --no-ri --no-rdoc
+  - bundle install -j4 --path vendor
+
+cache:
+  paths:
+    - vendor
+
+stages:
+  - test
+  - deploy
+
+lint:
+  stage: test
+  script:
+    - bundle exec rake lint
+  tags:
+    - ruby
+
 pages:
- stage: deploy
- script:
- - mkdir .public
- - cp -r * .public
- - mv .public public
- artifacts:
-   paths:
-   - public
- only:
- - master
+  stage: deploy
+  script:
+    - apt-get update -yqqq
+    - apt-get install -y nodejs
+    - bundle exec middleman build
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
