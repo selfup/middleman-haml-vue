@@ -2,46 +2,8 @@
 %html
   %head
     %title HAML Vue
-    %script(src="javascripts/vendor/vue.min.js")
-    %style(type="text/css")
-      :css
-        [v-cloak] {
-          display: none;
-        }
+    %link(href="stylesheets/application.css" rel="stylesheet")
 
-        .comment {
-          text-align: center;
-          border-style: solid none none none;
-          border-top-color: teal;
-          background-color: beige;
-          border-radius: 5px;
-          width: 200px;
-          margin-bottom: 5px;
-        }
-
-        h4 {
-          margin-bottom: 0px;
-          margin-top: 5px;
-          padding-bottom: 5px;
-        }
-
-        h1 {
-          text-align: center;
-          border-radius: 5px;
-          background-color: brown;
-          width: 200px;
-          padding-top: 5px;
-          padding-bottom: 5px;
-        }
-
-        h2 {
-          text-align: center;
-          border-radius: 5px;
-          background-color: #6ae2b4;
-          width: 200px;
-          padding-top: 5px;
-          padding-bottom: 5px;
-        }
   %body
     %h1
       HAML and:
@@ -52,4 +14,4 @@
           %h4{ v: { 'on:click' => 'logIndex($index)' } }
             {{ comment }}
 
-%script(src="javascripts/application.js")
+    %script(src="javascripts/application.js")
