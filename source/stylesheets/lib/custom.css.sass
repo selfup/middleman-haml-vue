@@ -1,5 +1,6 @@
-$font-stack:  Helvetica, sans-serif
-$card:  200px
+$font-stack: Courier
+$card: 200px
+$card-top: solid none none none
 
 body
   font: 100% $font-stack
@@ -9,28 +10,35 @@ body
 
 h1
   text-align: center
-  border-radius: 5px
-  background-color: brown
+  background-color: #a54d4d
+  border-radius: 3px
+  border-style: $card-top
+  border-width: thick
+  border-top-color: black
   width: $card
   padding-top: 5px
   padding-bottom: 5px
+  color: #5e1010
 
 .app
 
   h2
     text-align: center
-    border-radius: 5px
+    border-radius: 3px
+    border-style: $card-top
+    border-top-color: #0a913d
     background-color: #6ae2b4
     width: $card
     padding-top: 5px
     padding-bottom: 5px
+    color: #35441a
 
 .comment
   text-align: center
-  border-style: solid none none none
+  border-style: $card-top
   border-top-color: teal
   background-color: beige
-  border-radius: 5px
+  border-radius: 3px
   width: $card
   margin-bottom: 5px
 
