@@ -1,1 +1,1 @@
-HAML and VueJs
+HAML, Sass, and VueJs using Middleman.
