@@ -1,4 +1,5 @@
 require 'sprockets/es6'
+require 'bootstrap-sass'
 
 page '/*.xml', layout: false
 page '/*.json', layout: false

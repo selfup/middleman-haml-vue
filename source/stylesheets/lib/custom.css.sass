@@ -1,37 +1,39 @@
+@import 'bootstrap'
+
 $font-stack: Courier
-$card: 200px
+$card: 50%
 $card-top: solid none none none
 
 body
   font: 100% $font-stack
 
+.spa
+  margin-left: auto
+  margin-right: auto
+  text-align: center
+  width: $card
+
 [v-cloak]
   display: none
 
 h1
-  text-align: center
   background-color: #a54d4d
   border-radius: 3px
   border-style: $card-top
   border-width: thick
   border-top-color: black
-  width: $card
   padding-top: 5px
   padding-bottom: 5px
   color: #5e1010
 
-.app
-
-  h2
-    text-align: center
-    border-radius: 3px
-    border-style: $card-top
-    border-top-color: #0a913d
-    background-color: #6ae2b4
-    width: $card
-    padding-top: 5px
-    padding-bottom: 5px
-    color: #35441a
+h2
+  border-radius: 3px
+  border-style: $card-top
+  border-top-color: #0a913d
+  background-color: #6ae2b4
+  padding-top: 5px
+  padding-bottom: 5px
+  color: #35441a
 
 .comment
   text-align: center
@@ -39,10 +41,21 @@ h1
   border-top-color: teal
   background-color: beige
   border-radius: 3px
-  width: $card
   margin-bottom: 5px
 
   h4
     margin-bottom: 0px
     margin-top: 5px
     padding-bottom: 5px
+
+@media (max-width: 500px)
+  .spa
+    width: 90%
+
+@media (max-width: 600px)
+  .spa
+    width: 90%
+
+@media (max-width: 1000px)
+  .spa
+    width: 90%

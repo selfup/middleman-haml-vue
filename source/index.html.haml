@@ -1,17 +1,19 @@
 !!!
 %html
   %head
+    %meta(name="viewport" content="width=device-width, initial-scale=1")
     %title HAML Vue
     %link(href="stylesheets/application.css" rel="stylesheet")
 
   %body
-    %h1
-      HAML and:
-    .app(v-cloak)
-      %h2 {{ message }}
-      .comments
-        .comment{ "v-for" => 'comment in comments'}
-          %h4{ v: { 'on:click' => 'logIndex($index)' } }
-            {{ comment }}
+    .container.spa
+      %h1
+        HAML and:
+      .app(v-cloak)
+        %h2 {{ message }}
+        .comments
+          .comment{ "v-for" => 'comment in comments'}
+            %h4{ v: { 'on:click' => 'logIndex($index)' } }
+              {{ comment }}
 
     %script(src="javascripts/application.js")
