@@ -1,3 +1,3 @@
 new Vue({
-  el: 'body'
+  el: '.spa'
 })
