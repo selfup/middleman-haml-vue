@@ -1,10 +1,9 @@
-scss_files: "./source/stylesheets/custom.css.sass"
+scss_files: "./source/stylesheets/**"
 exclude:
   - "./source/stylesheets/vendor/**"
   - "./build/**"
   - "./public/**"
   - "./vendor/**"
-  - "./lib/fade.css"
 
 linters:
   BorderZero:
