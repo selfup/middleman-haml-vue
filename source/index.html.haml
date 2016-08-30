@@ -7,13 +7,6 @@
 
   %body
     .container.spa
-      %h1
-        HAML and:
-      .app.fade-in(v-cloak)
-        %h2 {{ message }}
-        .comments
-          .comment{ "v-for" => 'comment in comments'}
-            %h4{ v: { 'on:click' => 'logIndex($index)' } }
-              {{ comment }}
+      %app
 
     %script(src="javascripts/application.js")

@@ -1,0 +1,6 @@
+.app.fade-in(v-cloak)
+  %h2 {{ message }}
+  .comments
+    .comment.btn-primary{ "v-for" => 'comment in comments'}
+      %h4{ v: { 'on:click' => 'logIndex($index)' } }
+        {{ comment }}
