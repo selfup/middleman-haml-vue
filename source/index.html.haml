@@ -9,7 +9,7 @@
     .container.spa
       %h1
         HAML and:
-      .app(v-cloak)
+      .app.fade-in(v-cloak)
         %h2 {{ message }}
         .comments
           .comment{ "v-for" => 'comment in comments'}
