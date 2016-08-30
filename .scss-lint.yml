@@ -4,6 +4,7 @@ exclude:
   - "./build/**"
   - "./public/**"
   - "./vendor/**"
+  - "./lib/fade.css"
 
 linters:
   BorderZero:
