@@ -1,11 +1,11 @@
 ((vueGl) => {
   vueGl.Comments = Vue.extend({
     template: `
-      <div class="comments">
-        <div class="comment" v-for="comment in comments">
+      <section class="comments">
+        <article class="comment" v-for="comment in comments">
           <h4 v-on:click=logindex($index)>{{ comment }}</h4>
-        </div>
-      </div>
+        </article>
+      </section>
     `,
     data() {
       return {
