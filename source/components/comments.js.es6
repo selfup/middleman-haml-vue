@@ -1,10 +1,10 @@
 ((vueGl) => {
   vueGl.Comments = Vue.extend({
-    props: ['comments'],
+    props: ['comments', 'addindex'],
     template: `
       <section class="comments">
         <article class="comment" v-for="comment in comments">
-          <h4>{{ comment }}</h4>
+          <h4 @click='addindex($index)'>{{ comment }}</h4>
         </article>
       </section>
     `

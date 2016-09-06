@@ -4,16 +4,23 @@
       <haml></haml>
       <section class="app fade-in" v-cloak>
         <h2>{{ message }}</h2>
-        <comments :comments='comments'></comments>
+        <comments :comments='comments' :addindex='addindex'></comments>
         <a href="/index2.html" class='btn btn-success'>Go To App 2</a>
       </section>
     `,
-    data() {
-      return vueGl.commentsStore.getState()
+    vuex: {
+     getters: {
+       message: state => state.message,
+       comments: state => state.comments
+     }
+    },
+    methods: {
+      addindex() {
+        console.log('wow');
+        store.dispatch('INCREMENT')
+      }
     }
   })
-  // redux subscribe
-  vueGl.commentsStore.subscribe(vueGl.App)
 })(window.vueGl || (window.vueGl = {}))
 
 Vue.component('app', vueGl.App)

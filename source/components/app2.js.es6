@@ -8,12 +8,13 @@
         <a href="/" class='btn btn-success'>Back to Main App</a>
       </section>
     `,
-    data() {
-      return vueGl.commentsTwoStore.getState()
+    vuex: {
+     getters: {
+       message: state => state.message,
+       comments: state => state.commentsTwo
+     }
     }
   })
-  // redux subscribe
-  vueGl.commentsTwoStore.subscribe(vueGl.App2)
 })(window.vueGl || (window.vueGl = {}))
 
 Vue.component('second-app', vueGl.App2)
