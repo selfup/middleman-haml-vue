@@ -1,4 +1,4 @@
-((vueGl) => {
+(vueGl => {
   vueGl.App = Vue.extend({
     template: `
       <haml></haml>
@@ -16,7 +16,6 @@
     },
     methods: {
       addindex() {
-        console.log('wow');
         store.dispatch('INCREMENT')
       }
     }
