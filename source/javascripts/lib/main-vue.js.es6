@@ -27,7 +27,8 @@ const mutations = {
 
 const store = new Vuex.Store({
   state,
-  mutations
+  mutations,
+  strict: true
 })
 
 new Vue({
