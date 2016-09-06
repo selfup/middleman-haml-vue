@@ -1,11 +1,10 @@
 ((vueGl) => {
-  vueGl.App = Vue.extend({
+  vueGl.App2 = Vue.extend({
     template: `
       <haml></haml>
       <section class="app fade-in" v-cloak>
         <h2>{{ message }}</h2>
-        <comments :comments='comments'></comments>
-        <a href="/index2.html" class='btn btn-success'>Go To App 2</a>
+        <a href="/" class='btn btn-success'>Back to Main App</a>
       </section>
     `,
     data() {
@@ -21,4 +20,4 @@
   })
 })(window.vueGl || (window.vueGl = {}))
 
-Vue.component('app', vueGl.App)
+Vue.component('second-app', vueGl.App2)
