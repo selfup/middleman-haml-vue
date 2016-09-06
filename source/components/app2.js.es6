@@ -9,14 +9,11 @@
       </section>
     `,
     data() {
-      return {
-        message: 'Vue.js!',
-        comments: vueGl.commentsTwoStore.getState()
-      }
+      return vueGl.commentsTwoStore.getState()
     }
   })
+  // redux subscribe
+  vueGl.commentsTwoStore.subscribe(vueGl.App2)
 })(window.vueGl || (window.vueGl = {}))
 
 Vue.component('second-app', vueGl.App2)
-
-vueGl.commentsTwoStore.subscribe(vueGl.App)
