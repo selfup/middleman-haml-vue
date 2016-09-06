@@ -1,7 +1,7 @@
 (vueGl => {
   vueGl.comments = (state, action) => {
-    if (typeof state === 'undefined') return {
-        message: 'Vue.js!',
+    if (!state) return {
+        message: 'Redux/Vue.js!',
         comments: [
           "wow",
           "ok",
