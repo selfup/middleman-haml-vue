@@ -11,14 +11,12 @@
     data() {
       return {
         message: 'Vue.js!',
-        comments: [
-          "wow",
-          "ok",
-          "nice"
-        ]
+        comments: vueGl.commentsStore.getState()
       }
     }
   })
 })(window.vueGl || (window.vueGl = {}))
 
 Vue.component('app', vueGl.App)
+
+vueGl.commentsStore.subscribe(vueGl.App)

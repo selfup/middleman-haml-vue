@@ -11,14 +11,12 @@
     data() {
       return {
         message: 'Vue.js!',
-        comments: [
-          "wow from second app",
-          "ok from second app",
-          "nice from second app"
-        ]
+        comments: vueGl.commentsTwoStore.getState()
       }
     }
   })
 })(window.vueGl || (window.vueGl = {}))
 
 Vue.component('second-app', vueGl.App2)
+
+vueGl.commentsTwoStore.subscribe(vueGl.App)
